@@ -9,9 +9,9 @@ metadata:
     component: frontend 
   annotations:
     # kubernetes.io/change-cause: "moving to 1.29"
-    kubernetes.io/change-cause:  "{{ .Values.deployment.changeCause }}"
+    kubernetes.io/change-cause: {{ .Values.deployment.changeCause }}
 spec:
-  replicas: "{{ .Values.deployment.replicas }}"
+  replicas: {{ .Values.deployment.replicas }}
   selector:
     # using this labels replica set selects the pod
     matchLabels:
